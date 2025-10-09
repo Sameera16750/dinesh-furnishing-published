@@ -1697,7 +1697,7 @@ $("#user-nav-tabs li").on('click', function(e) {
 const toggleSwitch = document.querySelector('.switcher');
 const toggleInput =  document.querySelector('.switcher input');
 
-if(localStorage.colorScheme === 'dark') {
+if(localStorage.colorScheme === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.setAttribute('class', 'dark');
     toggleInput.checked = true;
 }else {
